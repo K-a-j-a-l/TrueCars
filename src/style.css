@@ -1,0 +1,192 @@
+.bar {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ z-index: 1000;
+}
+
+.hero-section {
+ background: url('https://cdn.wallpapersafari.com/12/40/120mvB.jpg')
+  center/cover no-repeat;
+ padding: 120px 0;
+ color: #fff;
+ margin-bottom: 20px;
+}
+
+.hero-section h1 {
+ font-size: 3rem;
+ margin: 20px auto;
+ font-weight: 600;
+}
+
+.hero-section h4 {
+ font-size: 1.2rem;
+ margin-bottom: 30px auto;
+ font-weight: 400;
+}
+
+.hero-section Form {
+ max-width: 300px;
+ margin: auto auto;
+}
+
+.hero-section Button {
+ width: 25%;
+ margin-left: 10px;
+}
+
+.shop-section {
+ width: 100%;
+ text-align: center;
+ justify-self: center;
+ align-content: center;
+ margin: 20px;
+ display: flex;
+ padding: 80px;
+}
+
+.shop-section h1 {
+ font-size: 2rem;
+ font-weight: 600;
+}
+
+.shop-section h4 {
+ font-size: 1.5rem;
+ font-weight: 500;
+ margin: 30px;
+}
+
+.card {
+ display: flex;
+ flex-wrap: wrap;
+ cursor: pointer;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ transition: transform 0.3s ease;
+}
+
+.card:hover {
+ transform: scale(1.05);
+}
+
+.icons {
+ padding: 10px;
+ width: 60px;
+ height: 60px;
+}
+
+.footer {
+ width: 100%;
+ margin: 20px auto;
+ background-color: #090909;
+ color: #fff;
+ padding: 40px 80px;
+}
+
+.footer h5 {
+ color: #fff;
+}
+
+.footer ul {
+ list-style: none;
+ padding: 0;
+}
+
+.footer ul li {
+ margin-bottom: 5px;
+}
+
+.footer a {
+ color: #f7e3e3fd;
+ text-align: left !important;
+ margin-left: 10px;
+}
+
+.footer a:hover,
+.social-icons a:hover {
+ color: rgba(162, 151, 151, 0.992);
+}
+
+.social-icons {
+ display: flex;
+}
+
+.social-icons a {
+ color: #fff;
+ font-size: 1rem;
+ margin-right: 18px;
+}
+
+.footer .row {
+ margin-top: 50px;
+}
+
+.footer p {
+ font-size: 0.7rem;
+ font-weight: 600;
+ margin: 0 auto;
+}
+
+.footer .copyright {
+ margin-top: 15px;
+ font-size: 0.8rem;
+ font-weight: 600;
+}
+
+.frmLogin {
+ margin: 100px;
+ border: 1px solid black;
+ padding: 10px 10px;
+ width: 900px;
+ height: 400px;
+}
+
+.btnHeader {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+ border-radius: 100px;
+ width: auto;
+ font-size: 0.7rem;
+ padding: 0 auto;
+ background-color: rgb(245, 245, 245);
+}
+
+.btn:hover {
+ color: blue;
+}
+
+.btn.active {
+ color: blue;
+ border: none;
+}
+
+.inpField {
+ height: auto;
+ border-radius: 100px;
+ background-color: rgb(245, 245, 245);
+}
+
+.inpField:focus {
+ outline: none;
+}
+
+.btnSubmit {
+ border-radius: 100px;
+ justify-content: flex-start;
+ width: 100px;
+ font-size: 0.7rem;
+}
+
+.btnSubmit:hover {
+ background-color: darkblue;
+ color: white;
+}
+
+.btnForgotPassword {
+ align-self: flex-end;
+}
+
+.btnForgotPassword:hover {
+ color: black;
+}
