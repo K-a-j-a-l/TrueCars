@@ -4,15 +4,16 @@ import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Cards from './Components/Cards'
 import Login from './Components/Login'
+import LoginRegister from './Pages/LoginRegister'
 
 function App() {
  return (
   <>
-   <Navbar />{' '}
+   {' '}
+   {/* <Navbar />{' '} */}{' '}
    {/* <Header />
-                           <Cards /> */}{' '}
-   <Login />
-   <Footer />
+                                                   <Cards /> */}{' '}
+   <LoginRegister /> {/* <Footer /> */}{' '}
   </>
  )
 }
