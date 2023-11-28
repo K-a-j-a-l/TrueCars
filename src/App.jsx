@@ -5,17 +5,22 @@ import Footer from './Components/Footer'
 import Cards from './Components/Cards'
 import Login from './Components/Login'
 import LoginRegister from './Pages/LoginRegister'
+import AdminPanel from "./Pages/AdminPanel"
 
 function App() {
- return (
-  <>
+    return (
+	  <>
    {' '}
    {/* <Navbar />{' '} */}{' '}
    {/* <Header />
-                                                   <Cards /> */}{' '}
-   <LoginRegister /> {/* <Footer /> */}{' '}
+    <Cards /> */}{' '}
+   {/* <LoginRegister />  */}
+    <AdminPanel/>
+                        
+   {/* <Footer /> */}{' '}
   </>
- )
+
+    )
 }
 
 export default App
