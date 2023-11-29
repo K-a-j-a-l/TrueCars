@@ -14,8 +14,8 @@ export default function Profile() {
           </Row>
         </Container>
       </div>
-      <Container fluid>
-      <Row>
+      <Container className="profile-content">
+      <Row >
         <Col md={8} className="order-sm-2 order-md-1">
 		<div className="profile-form-header">
 		<Row>
@@ -111,7 +111,25 @@ export default function Profile() {
               	className="user-image"
             	/>
             	<h2>User Name</h2>
-            	<p>A short introduction about the user.</p>
+            	<p>A short introduction about the user. A short introduction about the user. A short introduction about the user. A short introduction about the user. </p>
+		<Row>
+     		<Col md={12} sm={12}>
+      		  <div className="social-icons mt-5">
+       		  <a href="#" target="_blank" rel="noopener noreferrer">
+        		<i className="fa-brands fa-square-facebook"> </i>{' '}
+       		  </a>
+       		  <a href="#" target="_blank" rel="noopener noreferrer">
+        		<i className="fa-brands fa-square-twitter"> </i>{' '}
+       		  </a>
+       		  <a href="#" target="_blank" rel="noopener noreferrer">
+        		<i className="fa-brands fa-square-instagram"> </i>{' '}
+       		  </a>
+       		  <a href="#" target="_blank" rel="noopener noreferrer">
+        		<i className="fa-brands fa-linkedin"> </i>{' '}
+       		  </a>
+      		</div>
+     	       </Col>
+	      </Row>
           	</div>
         </Col>
       </Row>

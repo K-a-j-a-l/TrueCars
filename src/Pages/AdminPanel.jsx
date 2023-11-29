@@ -54,7 +54,7 @@ export default function AdminPanel() {
               <span><i className="fa-solid fa-bars"></i></span>
             </Col>
             <Col xs={10} md={2}>
-              <InputGroup className="mb-3">
+              <InputGroup>
                 <FormControl placeholder="Search..." />
               </InputGroup>
             </Col>
