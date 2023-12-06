@@ -6,6 +6,7 @@ import Cards from './Components/Cards'
 import Login from './Components/Login'
 import LoginRegister from './Pages/LoginRegister'
 import AdminPanel from "./Pages/AdminPanel"
+import AboutPage from "./Pages/AboutPage"
 
 function App() {
     return (
@@ -15,7 +16,8 @@ function App() {
    {/* <Header />
     <Cards /> */}{' '}
    {/* <LoginRegister />  */}
-    <AdminPanel/>
+    {/*<AdminPanel/>*/}
+    <AboutPage/>
                         
    {/* <Footer /> */}{' '}
   </>
