@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, InputGroup, FormControl } from 'react-bootstrap';
-import AdminSidebar from "../Components/AdminSidebar";
-import Dashboard from "../Components/Dashboard";
-import Profile from "../Components/Profile";
+import AdminSidebar from "../Components/AdminPanelComponents/AdminSidebar";
+import Dashboard from "../Components/AdminPanelComponents/Dashboard";
+import Profile from "../Components/AdminPanelComponents/Profile";
 import "../style.css";
 
 export default function AdminPanel() {

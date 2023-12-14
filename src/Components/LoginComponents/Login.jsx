@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
-import '../style.css';
+import '../../style.css';
 
 function Login() {
   const [showLogin, setShowLogin] = useState(true);

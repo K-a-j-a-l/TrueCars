@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Nav } from 'react-bootstrap';
-import "../style.css"
+import "../../style.css"
 
 export default function AdminSidebar({ activeTab, handleTabChange }) {
 

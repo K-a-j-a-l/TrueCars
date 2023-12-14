@@ -1,6 +1,5 @@
-import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import '../style.css'
+import '../../style.css'
 import Card from './CardLayout'
 
 export default function Cards() {
