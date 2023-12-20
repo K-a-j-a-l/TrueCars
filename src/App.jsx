@@ -6,11 +6,12 @@ import LoginRegister from './Pages/LoginRegister';
 import AdminPanel from './Pages/AdminPanel';
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
+import ListingPage from './Components/ListingComponents/ListingFeatures';
 
 function App() {
   return (
     <>
-	<ContactPage/>
+	<ListingPage/>
     </>
   );
 }
