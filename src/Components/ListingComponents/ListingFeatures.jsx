@@ -131,6 +131,7 @@ const ListingFeatures = () => {
           </Col>
         </Row>
       </Container>
+	
     </div>
   );
 };
