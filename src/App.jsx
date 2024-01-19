@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -12,7 +13,13 @@ import ProductPage from './Pages/ProductPage';
 function App() {
   return (
     <>
-	<ProductPage/>
+	    <Router>
+      <Routes>
+        <Route path="/" element={<LoginRegister />} />
+        <Route path="/AdminPanel" element={<AdminPanel />} />
+        
+      </Routes>
+    </Router>
     </>
   );
 }
