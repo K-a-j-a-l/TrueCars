@@ -54,7 +54,7 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index}>
                 <Row>
-                  <Col sm={12} md={4} xl={3}>
+                  <Col sm={12} md={6} xl={4}>
                     <Card className="testimonial-card" style={{ maxHeight: '200px', overflow: 'hidden' }}>
                       <Card.Body>
                         <div>

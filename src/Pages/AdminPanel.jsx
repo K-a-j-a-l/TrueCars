@@ -12,25 +12,12 @@ import {
 } from 'react-bootstrap'
 
 import '../style.css'
+import Deals from '../Components/AdminPanelComponents/Deals'
 
 export default function AdminPanel() {
  const [activeTab, setActiveTab] = useState('dashboard')
  const [sidebarOpen, setSidebarOpen] = useState(false)
-
- useEffect(() => {
-  // Check the screen size and set sidebarOpen accordingly
-  // const handleResize = () => {
-  //  setSidebarOpen(window.innerWidth >= 768) // Adjust the breakpoint as needed
-  // }
-
-  // handleResize()
-
-  // window.addEventListener('resize', handleResize)
-
-  // return () => {
-  //  window.removeEventListener('resize', handleResize)
-  // }
- }, [])
+ const userType = sessionStorage.getItem('role')
 
  const handleTabChange = (tab) => {
   setActiveTab(tab)
@@ -48,9 +35,10 @@ export default function AdminPanel() {
   <Container fluid>
    <Row>
     {sidebarOpen && (
-     <Col onClick={handleToggleSidebar}
+     <Col
+      onClick={handleToggleSidebar}
       xs={12}
-      md={2}
+      md={3}
       className={`admin-sidebar ${
        window.innerWidth < 768 ? 'mobile-open' : ''
       }`}
@@ -74,6 +62,7 @@ export default function AdminPanel() {
        <Nav className="flex-column">
         <Nav.Item>
          <Nav.Link
+          className="w-100 mt-2"
           eventKey="dashboard"
           active={activeTab === 'dashboard'}
           onClick={() => handleTabChange('dashboard')}
@@ -83,6 +72,7 @@ export default function AdminPanel() {
         </Nav.Item>
         <Nav.Item>
          <Nav.Link
+          className="w-100 mt-2"
           eventKey="profile"
           active={activeTab === 'profile'}
           onClick={() => handleTabChange('profile')}
@@ -90,15 +80,27 @@ export default function AdminPanel() {
           Profile
          </Nav.Link>
         </Nav.Item>
+        {userType === 'DEALER' && (
+         <Nav.Item>
+          <Nav.Link
+           className="w-100 mt-2"
+           eventKey="deals"
+           active={activeTab === 'deals'}
+           onClick={() => handleTabChange('deals')}
+          >
+           Deals
+          </Nav.Link>
+         </Nav.Item>
+        )}
        </Nav>
       </div>
      </Col>
     )}
-    <Col xs={12} md={sidebarOpen ? 10 : 12}>
+    <Col xs={12} md={sidebarOpen ? 9 : 12}>
      <Row className="upper-tab">
       <Col
        xs={2}
-       md={sidebarOpen ? 2 : 10}
+       md={sidebarOpen ? 3 : 9}
        className="toggle-sidebar"
        onClick={handleToggleSidebar}
       >
@@ -106,7 +108,7 @@ export default function AdminPanel() {
         <i className="fa-solid fa-bars"></i>
        </span>
       </Col>
-      <Col xs={10} md={2}>
+      <Col xs={10} md={3}>
        <InputGroup>
         <FormControl placeholder="Search..." />
        </InputGroup>
@@ -116,7 +118,13 @@ export default function AdminPanel() {
       <Col md={12}>
        <h3 className="content-heading">
         {' '}
-        {activeTab === 'dashboard' ? 'Dashboard' : 'Profile'}
+        {activeTab === 'dashboard'
+         ? 'Dashboard'
+         : activeTab === 'profile'
+         ? 'Profile'
+         : activeTab === 'deals'
+         ? 'Deals'
+         : 'Unknown Tab'}
        </h3>
        {activeTab === 'dashboard' && (
         <div>
@@ -161,7 +169,7 @@ export default function AdminPanel() {
        )}
        {activeTab === 'profile' && (
         <div>
-         <div className="profile-header">
+         <div className="profile-header w-100">
           <Container fluid>
            <Row>
             <Col md={10} lg={7}>
@@ -226,6 +234,7 @@ export default function AdminPanel() {
          </Container>
         </div>
        )}
+       {activeTab == 'deals' && <Deals />}
       </Col>
      </Row>
     </Col>

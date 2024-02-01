@@ -1,152 +1,139 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import '../style.css'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+    const navigate=useNavigate();
+    const handleContactClick=()=>{
+        navigate('/Contact');
+    }
+    const handleAboutClick=()=>{
+        navigate('/About')
+    }
  return (
-  <footer className="footer">
-   <Container>
-    <Row>
-     <Col md={3} sm={6}>
-      {' '}
-      <h5> Products </h5>{' '}
-      <ul>
-       <li>
-        {' '}
-        <a href="#"> Used </a>{' '}
-       </li>{' '}
-       <li>
-        {' '}
-        <a href="#"> New </a>{' '}
-       </li>{' '}
-       <li>
-        {' '}
-        <a href="#"> Sell Your Car </a>{' '}
-       </li>{' '}
-       <li>
-        {' '}
-        <a href="#"> EV </a>{' '}
-       </li>{' '}
-       <li>
-        {' '}
-        <a href="#"> Military </a>{' '}
-       </li>{' '}
-      </ul>{' '}
-     </Col>{' '}
-     <Col md={3} sm={6}>
-      <h5> Resources </h5>{' '}
-      <ul>
-       <li>
-        {' '}
-        <a href="#"> Blog </a>{' '}
-       </li>{' '}
-       <li>
-        {' '}
-        <a href="#"> FAQ </a>{' '}
-       </li>{' '}
-       <li>
-        {' '}
-        <a href="#"> Contact Us </a>{' '}
-       </li>{' '}
-       <li>
-        {' '}
-        <a href="#"> Contact </a>{' '}
-       </li>{' '}
-      </ul>{' '}
-     </Col>{' '}
-     <Col md={3} sm={6}>
-      <h5> Work With TrueCar </h5>{' '}
-      <ul>
-       <li>
-        {' '}
-        <a href="#"> Dealers </a>{' '}
-       </li>{' '}
-       <li>
-        {' '}
-        <a href="#"> Partners </a>{' '}
-       </li>{' '}
-      </ul>{' '}
-     </Col>{' '}
-     <Col md={3} sm={6}>
-      <h5> About </h5>{' '}
-      <ul>
-       <li>
-        {' '}
-        <a href="#"> TrueCar inc </a>{' '}
-       </li>{' '}
-       <li>
-        <a href="#"> Team </a>{' '}
-       </li>{' '}
-       <li>
-        <a href="#"> Careers </a>{' '}
-       </li>{' '}
-       <li>
-        <a href="#"> Press </a>{' '}
-       </li>{' '}
-       <li>
-        <a href="#"> Developers </a>{' '}
-       </li>{' '}
-       <li>
-        <a href="#"> Investors </a>{' '}
-       </li>{' '}
-      </ul>{' '}
-     </Col>{' '}
-    </Row>{' '}
-    <Row>
-     <Col md={6} sm={12}>
-      <div className="social-icons">
-       <a href="#" target="_blank" rel="noopener noreferrer">
-        {' '}
-        <i className="fa-brands fa-square-facebook"> </i>{' '}
-       </a>{' '}
-       <a href="#" target="_blank" rel="noopener noreferrer">
-        {' '}
-        <i className="fa-brands fa-square-twitter"> </i>{' '}
-       </a>{' '}
-       <a href="#" target="_blank" rel="noopener noreferrer">
-        {' '}
-        <i className="fa-brands fa-square-instagram"> </i>{' '}
-       </a>{' '}
-       <a href="#" target="_blank" rel="noopener noreferrer">
-        {' '}
-        <i className="fa-brands fa-linkedin"> </i>{' '}
-       </a>{' '}
-      </div>{' '}
-     </Col>{' '}
-    </Row>{' '}
-    <div className="row">
-     <Row className="text-center">
-      <Col>
-       <p>
-        For questions about the TrueCar Auto Buying Service please call{' '}
-        <a href="#"> 1 - 888 - 878 - 3227 </a>{' '}
-       </p>{' '}
-       <p>
-        Certified Dealers are contractually obligated by TrueCar to meet certain
-        customer service requirements and complete the TrueCar Dealer
-        Certification Program.{' '}
-       </p>{' '}
-       <p>
-        TrueCar does not broker, sell, or lease motor vehicles.Unless otherwise
-        noted, all vehicles shown on this website are offered for sale by
-        licensed motor vehicle dealers.All vehicles are subject to prior sale.By
-        accessing this website, you agree to the TrueCar Terms of Service and
-        Privacy Policy.{' '}
-       </p>{' '}
-       <p>
-        <a href="#"> Terms of Service </a> <a href="#"> Privacy Policy </a>{' '}
-        <a href="#"> California Privacy </a>{' '}
-        <a href="#"> Do Not Sell Or Share My Personal Information </a>{' '}
-       </p>{' '}
-       <p className="copyright">
-        {' '}
-        © and™ TrueCar, Inc.All rights reserved.Vehicle photos© Evox Images©
-        1986 - 2023 Chrome Data Solutions, LP.{' '}
-       </p>{' '}
-      </Col>{' '}
-     </Row>{' '}
-    </div>{' '}
-   </Container>{' '}
-  </footer>
+    <footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>1010 Avenue, sw 54321, chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>9876543210 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="logo"/></a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                            elit,Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Expert Team</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Latest News</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Expert Team</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Latest News</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address"/>
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
  )
 }
 

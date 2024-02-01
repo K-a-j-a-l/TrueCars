@@ -9,15 +9,20 @@ import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
 import ListingPage from './Components/ListingComponents/ListingFeatures';
 import ProductPage from './Pages/ProductPage';
+import HomePage from './Pages/HomePage';
 
 function App() {
   return (
     <>
 	    <Router>
       <Routes>
-        <Route path="/" element={<LoginRegister />} />
+        <Route path="/" element={<HomePage/>}></Route>
+        <Route path="/login" element={<LoginRegister />} />
         <Route path="/AdminPanel" element={<AdminPanel />} />
-        
+        <Route path="/Contact" element={<ContactPage/>}/>
+        <Route path="/About" element={<AboutPage/>}></Route>
+        <Route path="/Product" element={<ProductPage/>}></Route>
+        <Route path="/Listings" element={<ListingPage/>}></Route>
       </Routes>
     </Router>
     </>
