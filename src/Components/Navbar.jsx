@@ -1,97 +1,51 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import {
- Button,
- Container,
- Form,
- Nav,
- Navbar,
- NavDropdown,
-} from 'react-bootstrap'
-import '../style.css'
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link directly
 
-function NavbarHeader() {
-  const navigate = useNavigate()
-  const handleLoginClick=()=>{
-    navigate('/login')
-  }
-  const handleListingClick=()=>{
-    navigate("/Listings")
-  }
- return (
-  <Navbar
-   expand="lg"
-   className="bg-black text-white justify-content-evenly navbar-dark bar"
-  >
-   <Container>
-    <Navbar.Brand href="#" style={{ fontSize: '30px' }}>
-     TrueCar
-    </Navbar.Brand>
-    <Navbar.Toggle aria-controls="navbarScroll" />
-    <Navbar.Collapse id="navbarScroll">
-     <Nav
-      className="me-auto my-2 my-lg-0"
-      style={{ maxHeight: '100px' }}
-      navbarScroll
-     >
-      <NavDropdown title="New" id="navbarScrollingDropdown">
-       <NavDropdown.Item href="#action1" onClick={handleListingClick}>Car Listings</NavDropdown.Item>
-       <NavDropdown.Item href="#action2">Another action</NavDropdown.Item>
-       <NavDropdown.Divider />
-       <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-      </NavDropdown>
-      <NavDropdown title="Used" id="navbarScrollingDropdown">
-       <NavDropdown.Item href="#action1">Action</NavDropdown.Item>
-       <NavDropdown.Item href="#action2">Another action</NavDropdown.Item>
-       <NavDropdown.Divider />
-       <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-      </NavDropdown>
-      <NavDropdown title="Electric" id="navbarScrollingDropdown">
-       <NavDropdown.Item href="#action1">Action</NavDropdown.Item>
-       <NavDropdown.Item href="#action2">Another action</NavDropdown.Item>
-       <NavDropdown.Divider />
-       <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-      </NavDropdown>
-      <NavDropdown title="Research" id="navbarScrollingDropdown">
-       <NavDropdown.Item href="#action1">Action</NavDropdown.Item>
-       <NavDropdown.Item href="#action2">Another action</NavDropdown.Item>
-       <NavDropdown.Divider />
-       <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-      </NavDropdown>
-      <Nav.Link href="#">Sell Your Car</Nav.Link>
-     </Nav>
-     <Form className="d-flex mx-2">
-      <Form.Control
-       type="search"
-       placeholder="Search"
-       className="me-2"
-       aria-label="Search"
-      />
-      <Button variant="success">Search</Button>
-     </Form>
-     <div
-      className="border-right d-lg-block d-none"
-      style={{ height: '30px', backgroundColor: 'white', width: '2px' }}
-     ></div>
-     <Nav.Link href="#" style={{ marginLeft: '10px' }} onClick={handleLoginClick}>
-      Sign Up
-      <i
-       className="fa-solid fa-user"
-       style={{
-        fontSize: '1rem',
-        borderRadius: '50%',
-        border: '1px solid white',
-        padding: '5px',
-        backgroundColor: 'white',
-        color: 'black',
-        marginLeft: '5px',
-       }}
-      ></i>
-     </Nav.Link>
-    </Navbar.Collapse>
-   </Container>
-  </Navbar>
- )
-}
 
-export default NavbarHeader
+const Navbar = () => {
+  return (
+    <nav className="navbar navbar-expand-lg" style={{backgroundColor:'black'}}>
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/"><img src='https://consumer.tcimg.net/assets/_next/static/images/tc-logo-white-500-4f595f7ed8d0cc657d151b089a9bd452.png?auto=format&h=78&w=266' alt='Logo'/></Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link" aria-current="page" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Listings">Listings</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/About">About</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Contact">Contact</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/privacypolicy">Privacy Policy</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/termsandconditions">Terms & Conditions</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/loginRegister">Login/Register</Link>
+            </li>
+          </ul>
+            <div className='row'>
+              <div className='col-5'>
+              <button type="button" class="btn btn-outline-light rounded-pill px-4 py-2">Login</button>
+              </div>
+              <div className='col-5 flex-grow-1'>
+              <button type="button" class="btn btn-light rounded-pill px-4 py-2">Sign-Up</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

@@ -32,7 +32,7 @@ const AddDealForm = ({onClose, editDealData}) => {
             typeOfCarEngine: editDealData.typeOfCarEngine || 'Select Type of Car Engine',
             carExteriorColor: editDealData.carExteriorColor || '',
             transmission: editDealData.transmission || 'Select Transmission',
-            pricingDetails: editDealData.pricingDetails || '',
+            pricingDetails: editDealData.pricingDetails.exShowroomPrice || '',
             popularFeatures: editDealData.popularFeatures || 'Select Popular Features',
             fuelType: editDealData.fuelType || 'Select Fuel Type',
           });
@@ -57,6 +57,9 @@ const AddDealForm = ({onClose, editDealData}) => {
     
           if (response.ok) {
             showToast('success', 'Deal saved successfully!');
+            setTimeout(() => {
+              onClose();
+            }, 5000);
           } else {
             showToast('error', `Failed to save deal: ${result.message}`);
           }

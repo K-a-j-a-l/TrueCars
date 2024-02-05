@@ -1,112 +1,208 @@
-.bar {
- position: fixed;
- top: 0;
- width: 100vw;
- z-index: 1000;
- display: flex;
- justify-content: center;
- align-items: center;
+.nav-link{
+  color:white !important;
+}
+
+.nav-link:hover {
+  background-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 0.375em!important;
+}
+/* About Page CSS */
+
+.custom-link::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  /* Adjust the thickness of the underline */
+  background-color: blue;
+  /* Match the color with the link color */
+  position: absolute;
+  bottom: 20px;
+  /* Adjust the distance from the text */
+  transform-origin: bottom right;
+  transition: transform 0.25s ease;
+}
+
+.custom-link:hover::after {
+  transform: scaleX(0);
 }
 
 
-/* home page Style begin */
-.hero-section {
- background: url('https://cdn.wallpapersafari.com/12/40/120mvB.jpg')
-  center/cover no-repeat;
- padding: 120px 0;
- color: #fff;
- margin-bottom: 20px;
+/* Contact Page CSS */
+
+.max-width-800 {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero-section h1 {
- font-size: 3rem;
- margin: 20px auto;
- font-weight: 600;
+/* Contact Form Styling */
+
+#success-message {
+  opacity: 0;
 }
 
-.hero-section h4 {
- font-size: 1.2rem;
- margin-bottom: 30px auto;
- font-weight: 400;
+.margin-top-25 {
+  margin-top: 25px;
 }
 
-.hero-section Form {
- max-width: 300px;
- margin: auto auto;
+.form-title {
+  padding: 25px;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.hero-section Button {
- width: 25%;
- margin-left: 10px;
+.form-group .form-control {
+  -webkit-box-shadow: none;
+  border-bottom: 1px;
+  border-style: none none solid none;
+  border-radius: 0;
+  border-color: #000;
 }
 
-.shop-section {
- width: 100%;
- text-align: center;
- justify-self: center;
- align-content: center;
- margin: 20px;
- display: flex;
- padding: 80px;
+.form-group .form-control:focus {
+  box-shadow: none;
+  border-width: 0 0 2px 0;
+  border-color: #000;
+
 }
 
-.shop-section h1 {
- font-size: 2rem;
- font-weight: 600;
+textarea {
+  resize: none;
 }
 
-.shop-section h4 {
- font-size: 1.5rem;
- font-weight: 500;
- margin: 30px;
+.btn-mod.btn-large {
+  height: auto;
+  padding: 13px 52px;
+  font-size: 15px;
 }
 
-.card {
- display: flex;
- flex-wrap: wrap;
- cursor: pointer;
- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
- transition: transform 0.3s ease;
+.btn-mod.btn-border {
+  color: #000000;
+  border: 1px solid #000000;
+  background: transparent;
 }
 
-.card:hover {
- transform: scale(1.05);
+.btn-mod,
+a.btn-mod {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4px 13px;
+  color: #fff;
+  background: rgba(34, 34, 34, .9);
+  border: 1px solid transparent;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -moz-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -o-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -ms-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
 }
 
-.icons {
- padding: 10px;
- width: 60px;
- height: 60px;
+.btn-mod.btn-border:hover,
+.btn-mod.btn-border:active,
+.btn-mod.btn-border:focus,
+.btn-mod.btn-border:active:focus {
+  color: #fff;
+  border-color: #000;
+  background: #000;
+  outline: none;
 }
-  .my-card-image {
-    width: 15%;
-    height:40%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left:0;
-    border-radius: 50%;
+
+@media only screen and (max-width: 500px) {
+  .btn-mod.btn-large {
+    padding: 6px 16px;
+    font-size: 11px;
   }
 
-  .custom-card {
-    position: relative;
-    border: 1px solid #0a0a0a;
-    padding: 20px; 
+  .form-title {
+    font-size: 20px;
   }
+}
 
-  .custom-card-body{
-    padding: 15px;
-    margin-left: 47px;
-    font-size: 1rem;
-  }
+/* Homepage Styling */
 
-  .subline {
-    color: #666;
-    font-size: 14px;
-    margin:0;
-  }
-  
-/* home page style ends */
+.Brand-Cards img {
+  max-width: 65px;
+}
+
+section#Car-Reviews img.profile {
+  max-width: 40px;
+}
+
+
+/* Hero Section Search Form */
+
+div.search-form-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: white;
+}
+
+input.flexsearch--input:focus-visible {
+  outline: none;
+}
+
+input.flexsearch--submit {
+  background: none;
+  border: none;
+}
+
+input.flexsearch--input {
+  border: none;
+  width: 100%;
+}
+
+.flexsearch--input-wrapper {
+  width: 100%;
+}
+
+ul#myTab {
+  border-bottom: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--bs-accordion-active-color);
+  background-color: transparent!important;
+  box-shadow: 0px 1px 5px #cacaca!important;
+}
+
+.accordion-button:focus {
+ box-shadow: none!important;
+}
+
+.nav-tabs .nav-link {
+  border: none!important;
+}
+
+.nav-tabs .nav-link.active {
+  border-bottom: 2px solid black!important;
+  border-radius: 0px!important;
+}
+
+a.nav-link:hover {
+  text-decoration: none!important;
+}
+a.nav-link{
+  color:black;
+}
 
 ul {
     margin: 0px;
@@ -307,17 +403,22 @@ ul {
  color: gray;
 }
 
-.btnHeader {
- border-radius: 100px;
- height: auto;
- max-width: auto;
- font-size: 0.7rem;
- padding: 0 auto;
- background-color: rgb(245, 245, 245);
- justify-content: center;
- display: flex;
- flex-direction: row;
- align-items: center;
+.custom-tabs{
+  background-color: #202020;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.custom-tab{
+  font-size:1.2rem;
+  cursor:pointer;
+}
+.custom-tab:hover{
+  color:white;
+}
+
+.custom-tab.active {
+  color: #ffffff;
 }
 
 .btn:hover {
@@ -350,12 +451,9 @@ ul {
  color: white;
 }
 
-.btnForgotPassword {
- margin-left: 40px;
-}
-
 .btnForgotPassword:hover {
- color: black;
+ color: rgba(0, 0, 0, 0.525);
+ font-size: 1.2rem;
 }
 
 .sidebar {
@@ -364,7 +462,7 @@ ul {
  flex-direction: column;
  justify-content: center;
  align-items: center;
- color: black;
+ color: white;
 }
 
 .sidebar h1 {
@@ -375,8 +473,9 @@ ul {
 
 .sidebar p {
  text-align: justify;
- font-size: 1rem;
+ font-size: 0.8rem;
  line-height: 170%;
+ padding: 20px;
 }
 
 .loginContainer {
@@ -385,7 +484,6 @@ ul {
  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDATH8l5d08FvJObDB8ZoQkDW-rXEzhwTvUDGT96CF&s');
  background-size: cover;
  border: 1px solid black;
- margin-top:70px;
 }
 
 .borderless {
@@ -676,284 +774,6 @@ ul {
  justify-content: space-between;
 }
 /* Admin Panel Styling end */
-
-/* about page stying begins */
-.about-container {
- margin-top: 50px;
- background: linear-gradient(to right, #bcd4ec, rgba(245, 245, 245, 0.953));
- border-radius: 10px;
- width: 100vw;
- align-items: center;
- justify-content: center;
- padding: 50px 0;
- margin-bottom: 0;
-}
-
-.about-image {
- border-radius: 100px;
- opacity: 0.4;
-}
-
-.about-details {
- display: flex;
- flex-direction: column;
- justify-content: center;
- padding: 100px;
-}
-
-.about-heading,
-.contact-heading {
- font-size: 2.5rem;
- font-weight: 600;
- margin-bottom: 20px;
-}
-
-.google-ratings {
- margin-top: 30px;
- display: flex;
-}
-
-.google-icon {
- font-size: 24px;
- margin-bottom: 10px;
- margin-right: 10px;
-}
-
-.ratings-symbol {
- color: rgb(243, 243, 17);
- font-size: 24px;
- margin-bottom: 10px;
-}
-
-.vertical-line {
- border: 1px solid #121212;
- height: 1.2rem;
- margin: 0 10px;
-}
-
-.ratings-info {
- font-size: 16px;
- display: flex;
-}
-
-.about-paragraph {
- font-size: 1rem;
- text-align: center;
-}
-
-.cards {
- display: flex;
- padding: 10px;
-}
-
-.custom-card {
- margin-top: 20px;
- border: 1px solid #ddd;
- margin-left: 20px;
-}
-
-.card-heading {
- display: flex;
-}
-
-.icon {
- font-size: 1.5rem;
- margin-right: 12px;
-}
-
-.icon-section {
- display: flex;
- justify-content: space-between;
- margin-top: 40px;
- padding: 20px;
-}
-
-.icon-item {
- text-align: center;
-}
-
-.icon-heading {
- display: flex;
-}
-
-.icon-text {
- font-size: 1em;
- color: #555;
-}
-
-.items {
- display: flex;
- justify-content: center;
- align-items: center;
-}
-
-.item {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
-}
-
-.serial-icon {
- background-color: greenyellow;
- width: 35px;
- height: 35px;
- border-radius: 50%;
- display: flex;
- align-items: center;
- justify-content: center;
- font-size: 0.8rem;
- margin-bottom: 30px;
-}
-
-.desc-icon {
- font-size: 2rem;
- width: 70px;
- height: 70px;
- border-radius: 50%;
- display: flex;
- align-items: center;
- justify-content: center;
- margin-bottom: 30px;
- background-color: white;
- cursor: pointer;
- transition: background-color 0.3s linear;
-}
-
-.desc-icon:hover {
- background-color: greenyellow;
-}
-
-/* about page stying ends */
-
-/* contact page stying begins */
-
-.contact-banner {
- padding: 120px 0;
- color: #fff;
- margin-bottom: 20px;
- border-bottom: 1px solid #ccc;
- background-image: url(https://images.unsplash.com/photo-1517994112540-009c47ea476b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D);
- background-size: cover;
- background-position: center;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
-}
-
-.arrow {
- font-size: 0.9rem;
- color: white;
- margin: 0 10px;
- font-weight: 500;
-}
-
-.contact-banner .link {
- font-size: 0.8rem;
- color: white !important;
- font-weight: 500;
-}
-
-.contact-cards {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
-}
-
-.feature-card {
- padding: 20px;
- margin-bottom: 20px;
- background-color: #f6f2f2;
- outline: none;
- border: none;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- max-height: 50vh;
- max-width: 70vw;
-}
-
-.feature-card:hover {
- box-shadow: none;
- transform: none;
-}
-
-.feature-dropdown{
-    background-color: whitesmoke;
-    border: none;
-    color:black;
-}
-.feature-dropdown:hover{
-    background-color: whitesmoke;
-    border: none;
-    color:black;
-}
-
-.icon-container {
- font-size: 2rem;
- color: white;
- padding: 26px;
- margin-left: 30px;
- margin-bottom: 10px;
- background-color: rgb(233, 49, 49);
- max-height: 90px;
- max-width: 120px;
-}
-
-@media (max-width: 767px) {
- .feature-card {
-  padding: 15px;
-  margin-left: 40px;
- }
- .icon-container {
-  padding: 10px;
- }
-}
-
-.card-title {
- font-size: 1rem;
- font-weight: 700;
- color: rgba(16, 16, 16, 0.678);
-}
-
-.card-text {
- font-size: 0.8rem;
- color: rgba(16, 16, 16, 0.678);
-}
-
-.form-heading {
- color: rgba(16, 16, 16, 0.678);
- font-size: 1.5rem;
- font-weight: 700;
- margin-bottom: 10px;
-}
-
-.form-paragraph {
- color: rgba(16, 16, 16, 0.678);
- font-size: 0.8rem;
-}
-
-.sendBtn {
- background-color: red;
- color: white;
- padding: 12px;
- font-size: 0.7rem;
- font-weight: 600;
- transform: scale(1);
- transition: transform 0.3s ease;
-}
-
-.sendBtn:hover {
- background-color: rgba(16, 16, 16, 0.678);
- color: white;
- transform: scale(1.1);
-}
-
-/* contact page stying begins */
-
 .header {
  color: black;
  padding: 20px;
@@ -974,14 +794,14 @@ ul {
  padding: 15px;
 }
 
-.features-list {
+/* .features-list {
  display: flex;
  flex-direction: column;
  justify-content: space-between;
  align-items: center;
  background-color: whitesmoke;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .features-form {
  margin-bottom: 20px;

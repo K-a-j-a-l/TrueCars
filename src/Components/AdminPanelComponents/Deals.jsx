@@ -9,7 +9,6 @@ const Deals = () => {
   const [dealsData, setDealsData] = useState([]);
 
   useEffect(() => {
-    // Fetch deals data from the API
     const fetchDeals = async () => {
       try {
         const token = sessionStorage.getItem('token');
@@ -38,7 +37,7 @@ const Deals = () => {
     };
 
     fetchDeals();
-  }, []); // The empty dependency array ensures that this effect runs only once, similar to componentDidMount
+  }, [showForm]); // The empty dependency array ensures that this effect runs only once, similar to componentDidMount
 
   console.log(dealsData);
 
@@ -94,7 +93,7 @@ const Deals = () => {
                       <tr key={deal.id}>
                         <td>{deal.name}</td>
                         <td>{deal.brand}</td>
-                        <td>{deal.BodyStyle}</td>
+                        <td>{deal.bodyStyle}</td>
                         <td>{deal.pricingDetails.exShowroomPrice}</td>
                         <td>{deal.fuelType}</td>
                         <td>{formatTimestamp(deal.createdOn)}</td>

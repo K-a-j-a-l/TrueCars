@@ -39,7 +39,7 @@ export default function AdminPanel() {
       onClick={handleToggleSidebar}
       xs={12}
       md={3}
-      className={`admin-sidebar ${
+      className={`admin-sidebar bg-dark ${
        window.innerWidth < 768 ? 'mobile-open' : ''
       }`}
      >
@@ -97,7 +97,7 @@ export default function AdminPanel() {
      </Col>
     )}
     <Col xs={12} md={sidebarOpen ? 9 : 12}>
-     <Row className="upper-tab">
+     <Row className="upper-tab bg-dark">
       <Col
        xs={2}
        md={sidebarOpen ? 3 : 9}
